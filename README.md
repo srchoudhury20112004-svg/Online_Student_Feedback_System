@@ -57,37 +57,68 @@ OnlineStudentFeedbackSystem/
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   ├── controller/        # Servlets handling requests & responses
-│       │   │   ├── LoginServlet.java
-│       │   │   ├── FeedbackServlet.java
-│       │   │   └── AdminServlet.java
-│       │   │
-│       │   ├── dao/               # Database access layer
-│       │   │   ├── UserDAO.java
-│       │   │   └── FeedbackDAO.java
-│       │   │
-│       │   ├── model/             # Entity / Model classes
-│       │   │   ├── User.java
-│       │   │   └── Feedback.java
-│       │   │
-│       │   └── util/              # Utility classes
-│       │       └── DBConnection.java
+│       │   └── com/
+│       │       └── companyname/
+│       │           └── feedbacksystem/
+│       │               ├── config/                 # Application configuration
+│       │               │   └── AppConfig.java
+│       │               │
+│       │               ├── controller/             # Servlets (Controllers)
+│       │               │   ├── AuthController.java
+│       │               │   ├── FeedbackController.java
+│       │               │   └── AdminController.java
+│       │               │
+│       │               ├── service/                # Business logic layer
+│       │               │   ├── AuthService.java
+│       │               │   └── FeedbackService.java
+│       │               │
+│       │               ├── dao/                    # Data access layer
+│       │               │   ├── UserDAO.java
+│       │               │   └── FeedbackDAO.java
+│       │               │
+│       │               ├── model/                  # Entity / Domain classes
+│       │               │   ├── User.java
+│       │               │   └── Feedback.java
+│       │               │
+│       │               ├── dto/                    # Data Transfer Objects
+│       │               │   └── FeedbackDTO.java
+│       │               │
+│       │               ├── exception/              # Custom exceptions
+│       │               │   └── ApplicationException.java
+│       │               │
+│       │               └── util/                   # Utility classes
+│       │                   ├── DBConnection.java
+│       │                   └── PasswordEncoder.java
 │       │
 │       ├── resources/
-│       │   └── db.properties      # Database configuration
+│       │   ├── db.properties                       # Database configuration
+│       │   └── log4j2.xml                          # Logging configuration
 │       │
 │       └── webapp/
-│           ├── css/               # Stylesheets
-│           │   └── style.css
+│           ├── assets/
+│           │   ├── css/
+│           │   │   └── style.css
+│           │   ├── js/
+│           │   │   └── validation.js
+│           │   └── images/
 │           │
-│           ├── pages/             # JSP pages
+│           ├── WEB-INF/
+│           │   └── web.xml                         # Servlet configuration
+│           │
+│           ├── views/                              # JSP views
 │           │   ├── login.jsp
 │           │   ├── feedback.jsp
 │           │   └── admin.jsp
 │           │
-│           └── index.jsp          # Application entry page
+│           └── index.jsp                           # Entry point
 │
-├── database_setup.sql             # SQL script for DB tables
-├── pom.xml                        # Maven configuration
-└── README.md                      # Project documentation
+├── database/
+│   └── database_setup.sql                          # Database schema
+│
+├── docs/
+│   └── project-report.pdf                          # Documentation
+│
+├── pom.xml                                         # Maven build file
+└── README.md                                       # Project documentation
+
 
