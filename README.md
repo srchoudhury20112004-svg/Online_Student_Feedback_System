@@ -52,3 +52,42 @@ This system improves transparency, efficiency, and decision-making in educationa
 
 ## 📁 Project Structure
 
+OnlineStudentFeedbackSystem/
+│
+├── src/
+│   └── main/
+│       ├── java/
+│       │   ├── controller/        # Servlets handling requests & responses
+│       │   │   ├── LoginServlet.java
+│       │   │   ├── FeedbackServlet.java
+│       │   │   └── AdminServlet.java
+│       │   │
+│       │   ├── dao/               # Database access layer
+│       │   │   ├── UserDAO.java
+│       │   │   └── FeedbackDAO.java
+│       │   │
+│       │   ├── model/             # Entity / Model classes
+│       │   │   ├── User.java
+│       │   │   └── Feedback.java
+│       │   │
+│       │   └── util/              # Utility classes
+│       │       └── DBConnection.java
+│       │
+│       ├── resources/
+│       │   └── db.properties      # Database configuration
+│       │
+│       └── webapp/
+│           ├── css/               # Stylesheets
+│           │   └── style.css
+│           │
+│           ├── pages/             # JSP pages
+│           │   ├── login.jsp
+│           │   ├── feedback.jsp
+│           │   └── admin.jsp
+│           │
+│           └── index.jsp          # Application entry page
+│
+├── database_setup.sql             # SQL script for DB tables
+├── pom.xml                        # Maven configuration
+└── README.md                      # Project documentation
+
