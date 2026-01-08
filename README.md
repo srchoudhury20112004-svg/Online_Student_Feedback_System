@@ -1,41 +1,42 @@
 # Online Student Feedback System
 
-A secure and user-friendly **web application** that allows students to submit feedback online and enables administrators to efficiently manage and review responses.  
-Built using **Java Servlets, MySQL, HTML, CSS**, and deployed on **Apache Tomcat**.
+A secure and scalable **web-based application** that enables students to submit feedback online and allows administrators to efficiently manage and analyze responses.  
+Built using **Java Servlets, MySQL, HTML, CSS**, and deployed on **Apache Tomcat** following an enterprise-level layered architecture.
 
 ---
 
 ## 🌟 Project Overview
 
-The Online Student Feedback System digitizes the traditional feedback process by providing a centralized platform where:
+The Online Student Feedback System modernizes the traditional feedback process by providing a centralized digital platform where:
 
-- Students can share honest feedback anytime, anywhere  
-- Administrators can analyze feedback for academic and service improvements  
-- Data is stored securely in a relational database  
+- Students can submit feedback anytime, anywhere  
+- Administrators can review feedback efficiently  
+- Institutions can improve academic and service quality  
+- Data is stored securely and accessed in a controlled manner  
 
-This system improves transparency, efficiency, and decision-making in educational institutions.
+This system ensures **transparency, efficiency, and accountability** in feedback management.
 
 ---
 
-## 🚀 Key Features
+## 🚀 Features
 
 ### 👨‍🎓 Student Module
-- Secure login system  
-- Submit feedback through validated forms  
-- View submission confirmation  
+- Secure authentication  
+- Submit feedback using validated forms  
+- Confirmation after successful submission  
 
 ### 👩‍💼 Admin Module
 - Secure admin login  
-- View all submitted feedback  
-- Manage student responses  
+- View all student feedback  
+- Manage feedback records  
 - Monitor feedback trends  
 
 ### ⚙️ System Features
-- Role-based authentication (Student / Admin)  
-- Responsive UI design  
+- Role-based access control  
+- Responsive UI  
 - Server-side and client-side validation  
-- Secure database connectivity  
-- Modular MVC-style architecture  
+- Secure JDBC connectivity  
+- Enterprise-level layered architecture  
 
 ---
 
@@ -50,8 +51,9 @@ This system improves transparency, efficiency, and decision-making in educationa
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure (Enterprise Level)
 
+```text
 OnlineStudentFeedbackSystem/
 │
 ├── src/
@@ -60,39 +62,39 @@ OnlineStudentFeedbackSystem/
 │       │   └── com/
 │       │       └── companyname/
 │       │           └── feedbacksystem/
-│       │               ├── config/                 # Application configuration
+│       │               ├── config/                     # Application configuration
 │       │               │   └── AppConfig.java
 │       │               │
-│       │               ├── controller/             # Servlets (Controllers)
+│       │               ├── controller/                 # Servlets (Controllers)
 │       │               │   ├── AuthController.java
 │       │               │   ├── FeedbackController.java
 │       │               │   └── AdminController.java
 │       │               │
-│       │               ├── service/                # Business logic layer
+│       │               ├── service/                    # Business logic layer
 │       │               │   ├── AuthService.java
 │       │               │   └── FeedbackService.java
 │       │               │
-│       │               ├── dao/                    # Data access layer
+│       │               ├── dao/                        # Data access layer
 │       │               │   ├── UserDAO.java
 │       │               │   └── FeedbackDAO.java
 │       │               │
-│       │               ├── model/                  # Entity / Domain classes
+│       │               ├── model/                      # Entity / Domain classes
 │       │               │   ├── User.java
 │       │               │   └── Feedback.java
 │       │               │
-│       │               ├── dto/                    # Data Transfer Objects
+│       │               ├── dto/                        # Data Transfer Objects
 │       │               │   └── FeedbackDTO.java
 │       │               │
-│       │               ├── exception/              # Custom exceptions
+│       │               ├── exception/                  # Custom exceptions
 │       │               │   └── ApplicationException.java
 │       │               │
-│       │               └── util/                   # Utility classes
+│       │               └── util/                       # Utility classes
 │       │                   ├── DBConnection.java
 │       │                   └── PasswordEncoder.java
 │       │
 │       ├── resources/
-│       │   ├── db.properties                       # Database configuration
-│       │   └── log4j2.xml                          # Logging configuration
+│       │   ├── db.properties                           # Database configuration
+│       │   └── log4j2.xml                              # Logging configuration
 │       │
 │       └── webapp/
 │           ├── assets/
@@ -103,22 +105,20 @@ OnlineStudentFeedbackSystem/
 │           │   └── images/
 │           │
 │           ├── WEB-INF/
-│           │   └── web.xml                         # Servlet configuration
+│           │   └── web.xml                             # Servlet configuration
 │           │
-│           ├── views/                              # JSP views
+│           ├── views/                                  # JSP pages
 │           │   ├── login.jsp
 │           │   ├── feedback.jsp
 │           │   └── admin.jsp
 │           │
-│           └── index.jsp                           # Entry point
+│           └── index.jsp                               # Application entry point
 │
 ├── database/
-│   └── database_setup.sql                          # Database schema
+│   └── database_setup.sql                              # Database schema
 │
 ├── docs/
-│   └── project-report.pdf                          # Documentation
+│   └── project-report.pdf                              # Documentation
 │
-├── pom.xml                                         # Maven build file
-└── README.md                                       # Project documentation
-
-
+├── pom.xml                                             # Maven build file
+└── README.md                                           # Project documentation
